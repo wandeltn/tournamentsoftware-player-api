@@ -1,9 +1,9 @@
 {
-  "name": "",
-  "description": "",
-  "repository": "",
+  "name": "tournamentsoftware-player-api",
+  "description": "A Node.js API client for Tournament Software Player API",
+  "repository": "https://github.com/wandeltn/tournamentsoftware-player-api",
   "homepage": "",
-  "author": "",
+  "author": "wandeltn",
   "keywords": [],
   "private": true,
   "version": "0.0.1",
