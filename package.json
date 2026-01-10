@@ -5,7 +5,7 @@
   "homepage": "",
   "author": "wandeltn",
   "keywords": [],
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "engines": {
     "node": ">=13.2.0"
@@ -26,7 +26,7 @@
     "format": "prettier src/**/*.ts -w",
     "build-live": "tsc -w && tsc-alias -w"
   },
-  "license": "MIT",
+  "license": "MPL-2.0",
   "dependencies": {
     "axios": "^1.13.2",
     "cheerio": "^1.1.2",
