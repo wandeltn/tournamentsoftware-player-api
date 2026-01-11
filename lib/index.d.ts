@@ -6,7 +6,7 @@
  * whatever is exported here is what they'll get.
  * For small projects you could put all your code right in this file.
  */
-import getPlayerDetails from './lib/api.js';
-export * from './lib/sample-module.js';
+import getPlayerDetails from './lib/api';
+export * from './lib/sample-module';
 export default getPlayerDetails;
 //# sourceMappingURL=index.d.ts.map

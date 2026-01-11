@@ -6,8 +6,8 @@
  * whatever is exported here is what they'll get.
  * For small projects you could put all your code right in this file.
  */
-import getPlayerDetails from '@/api.js';
+import getPlayerDetails from '@/api';
 
-export * from './lib/sample-module.js';
+export * from './lib/sample-module';
 
 export default getPlayerDetails;
