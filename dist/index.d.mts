@@ -12,4 +12,6 @@ interface PlayerDetails {
   id: string;
 }
 
-export type { PlayerDetails };
+declare function getPlayerDetails(name: string): Promise<PlayerDetails>;
+
+export { getPlayerDetails };

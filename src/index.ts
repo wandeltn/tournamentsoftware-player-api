@@ -8,6 +8,4 @@
  */
 import getPlayerDetails from '@/api';
 
-export * from './lib/sample-module';
-
-export default getPlayerDetails;
+export { getPlayerDetails };

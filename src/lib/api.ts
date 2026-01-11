@@ -1,4 +1,4 @@
-import { PlayerDetails } from '$/types/index.js';
+import { PlayerDetails } from '$/types/index';
 import axios, {
   AxiosResponse,
   AxiosRequestConfig,
