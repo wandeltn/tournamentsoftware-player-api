@@ -9,23 +9,24 @@
   "author": "wandeltn",
   "keywords": [],
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "node": ">=13.2.0"
   },
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "typings": "./lib/index.d.ts",
   "typesVersions": {
     ">=3.1": { "*": ["ts3.1/*"] }
   },
   "files": [
-    "lib/**/*",
+    "lib",
     "index.*",
     "types/**/*"
   ],
   "scripts": {
     "test": "npm run build && mocha --inspect --require source-map-support/register --bail ./lib/test/",
-    "build": "rimraf build && tsc && tsc-alias",
+    "build": "rimraf build && tsc && tsc-alias && node ./scripts/copy-types.js",
     "prepare": "npm run build",
     "preversion": "npm run lint && npm run build && npm test",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && npm run format && git add -A",
@@ -36,13 +37,7 @@
   },
   "license": "MPL-2.0",
 
-  "exports": {
-    ".": {
-      "import": "./lib/index.js",
-      "require": "./lib/index.js",
-      "types": "./lib/index.d.ts"
-    }
-  },
+  
   "dependencies": {
     "axios": "^1.13.2",
     "cheerio": "^1.1.2",
