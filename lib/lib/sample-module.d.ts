@@ -3,5 +3,5 @@
  * You can then choose what to make available by default by
  * exporting your lib modules from the ./src/index.ts entrypoint.
  */
-
 export default undefined;
+//# sourceMappingURL=sample-module.d.ts.map

@@ -9,13 +9,13 @@
  * section of your package.json file)
  */
 
-import {expect} from "chai";
-import fs from "fs-extra";
-import { get } from "http";
-import getPlayerDetails from "../lib/api.js";
+import { expect } from 'chai';
+import fs from 'fs-extra';
+import { get } from 'http';
+import getPlayerDetails from '../lib/api.js';
 
-const sandboxRoot = "./sandbox";
-const samplesRoot = "./samples";
+const sandboxRoot = './sandbox';
+const samplesRoot = './samples';
 
 /**
  * Clone any files in a "./samples" folder into
@@ -26,7 +26,7 @@ const samplesRoot = "./samples";
  * reset back to an original state prior to running a test.
  */
 function resetSandbox() {
-  if(!fs.existsSync(samplesRoot)){
+  if (!fs.existsSync(samplesRoot)) {
     // Then no samples exist, and no sandbox needed
     return;
   }
@@ -35,26 +35,24 @@ function resetSandbox() {
   fs.copySync(samplesRoot, sandboxRoot);
 }
 
-describe("Test Suite", function () {
-
-  before(function(){
+describe('Test Suite', function () {
+  before(function () {
     resetSandbox();
   });
 
-  describe("Test Group", function () {
-    it("can do something", async function () {
+  describe('Test Group', function () {
+    it('can do something', async function () {
       resetSandbox();
 
-      const playerDetails = await getPlayerDetails("05x 1234567");
+      const playerDetails = await getPlayerDetails('05x 1234567');
 
-      expect(playerDetails.club).to.equal("Demo Club");
-      expect(playerDetails.name).to.equal("Test Player1");
-      expect(playerDetails.id).to.equal("05x 1234567");
+      expect(playerDetails.club).to.equal('Demo Club');
+      expect(playerDetails.name).to.equal('Test Player1');
+      expect(playerDetails.id).to.equal('05x 1234567');
     });
   });
 
-  after(function(){
+  after(function () {
     resetSandbox();
   });
-
 });

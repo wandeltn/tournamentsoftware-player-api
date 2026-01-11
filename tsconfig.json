@@ -1,11 +1,11 @@
 {
-  "include": ["./src"],
+  "include": ["src/**/*.ts", "test/**/*.ts"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "target": "es2017",
     "module": "commonjs",
     "lib": ["es2020"],
-    "outDir": "./build",
+    "outDir": "./lib",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
@@ -17,6 +17,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "baseUrl": ".",
+    
     "paths": {
       /*
         Allow using e.g. `import '@/sample-module' instead of using relative paths.
@@ -34,7 +35,8 @@
       "@/*": ["src/lib/*"],
       "$/*": ["src/*"],
       "$cli/*": ["src/cli/*"],
-      "$test/*": ["src/test/*"]
+      "$test/*": ["src/test/*"],
+      "$types/*": ["src/types/*"]
     }
   }
 }

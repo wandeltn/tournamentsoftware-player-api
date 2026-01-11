@@ -7,9 +7,9 @@
  */
 
 interface PlayerDetails {
-    name: string;
-    club: string;
-    id: string;
-};
+  name: string;
+  club: string;
+  id: string;
+}
 
 export type { PlayerDetails };

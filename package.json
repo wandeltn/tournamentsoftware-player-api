@@ -1,7 +1,10 @@
 {
   "name": "tournamentsoftware-player-api",
   "description": "A Node.js API client for Tournament Software Player API",
-  "repository": "https://github.com/wandeltn/tournamentsoftware-player-api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wandeltn/tournamentsoftware-player-api.git"
+  },
   "homepage": "",
   "author": "wandeltn",
   "keywords": [],
@@ -10,14 +13,18 @@
   "engines": {
     "node": ">=13.2.0"
   },
-  "main": "./build/index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "typesVersions": {
+    ">=3.1": { "*": ["ts3.1/*"] }
+  },
   "files": [
-    "build/lib/**/*",
-    "build/index.*",
-    "build/types/**/*"
+    "lib/**/*",
+    "index.*",
+    "types/**/*"
   ],
   "scripts": {
-    "test": "npm run build && mocha --inspect --require source-map-support/register --bail ./build/test/",
+    "test": "npm run build && mocha --inspect --require source-map-support/register --bail ./lib/test/",
     "build": "rimraf build && tsc && tsc-alias",
     "preversion": "npm run lint && npm run build && npm test",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && npm run format && git add -A",
